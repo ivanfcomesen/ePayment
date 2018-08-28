@@ -30,8 +30,8 @@ public class PrivilegeController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/privilege")
-	public void addPermission(@RequestBody Privilege privilege) {
-		
+	public void addPrivilege(@RequestBody Privilege privilege) {
+		privilegeService.createPrivilegeIfNotFound(privilege);
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "/privilege/{id}")

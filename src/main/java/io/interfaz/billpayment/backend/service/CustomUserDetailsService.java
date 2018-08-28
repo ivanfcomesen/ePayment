@@ -24,10 +24,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		/*
-		 * Here we are using dummy data, you need to load user data from database or
-		 * other third party application
-		 */
+		
 		User user = userRepo.findByUserName(username);
 
 		UserBuilder builder = null;
@@ -44,12 +41,12 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Transactional
 	public User createUserIfNotFound(User user) {
 
-		User user2 = userRepo.findByUserName(user.getUserName());
-		if (user2 == null) {
-			user = new User(user);
-			userRepo.save(user);
+		User newUser = userRepo.findByUserName(user.getUserName());
+		if (newUser == null) {
+			newUser = new User(user);
+			userRepo.save(newUser);
 		}
-		return user;
+		return newUser;
 	}
 
 	public List<User> getAllUsers() {
