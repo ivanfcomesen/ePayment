@@ -1,12 +1,12 @@
-package io.interfaz.billpayment.InterfazEPayment;
+package io.interfaz.billpayment.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InterfazEPaymentApplication {
+public class BillPayment {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InterfazEPaymentApplication.class, args);
+		SpringApplication.run(BillPayment.class, args);
 	}
 }
