@@ -1,10 +1,10 @@
 package io.interfaz.billpayment.backend.dao;
 
 import org.springframework.data.repository.CrudRepository;
-import io.interfaz.billpayment.backend.model.Role;
+import io.interfaz.billpayment.backend.model.Authorities;
 
-public interface RoleRepository extends CrudRepository <Role, Long> {
+public interface RoleRepository extends CrudRepository <Authorities, Long> {
 
-	Role findByName(String name);
+	Authorities findByName(String name);
 	
 }

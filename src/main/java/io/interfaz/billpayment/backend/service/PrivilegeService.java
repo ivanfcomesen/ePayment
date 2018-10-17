@@ -17,8 +17,7 @@ public class PrivilegeService {
 	@Autowired
 	private PrivilegeRepository privilegeRepo;
 	
-	
-	public List<Privilege> getAllPrivileges() {
+	/* List<Privilege> getAllPrivileges() {
 
 		List<Privilege> privileges = new ArrayList<>();
 		privilegeRepo.findAll().forEach(privileges::add);
@@ -45,7 +44,7 @@ public class PrivilegeService {
 	}
 	public void deletePrivilege(Long id) {
 		privilegeRepo.delete(id);
-	}
+	}*/
 	
 	
 	

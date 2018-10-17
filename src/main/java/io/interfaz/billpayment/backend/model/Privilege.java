@@ -17,8 +17,8 @@ public class Privilege {
 
 	private String name;
 
-	@ManyToMany(mappedBy = "privileges")
-	private List<Role> roles;
+	//@ManyToMany(mappedBy = "privileges")
+	//private List<Authorities> roles;
 
 	public Privilege() {
 	}
@@ -26,7 +26,7 @@ public class Privilege {
 	public Privilege(Privilege privilege) {
 		this.id = privilege.getId();
 		this.name = privilege.getName();
-		this.roles = privilege.getRoles();
+	//	this.roles = privilege.getRoles();
 	}
 
 	public Long getId() {
@@ -45,12 +45,12 @@ public class Privilege {
 		this.name = name;
 	}
 
-	public List<Role> getRoles() {
+	/*public List<Authorities> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(List<Role> roles) {
+	public void setRoles(List<Authorities> roles) {
 		this.roles = roles;
-	}
+	}*/
 
 }

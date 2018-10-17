@@ -10,40 +10,40 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.interfaz.billpayment.backend.model.User;
-import io.interfaz.billpayment.backend.service.CustomUserDetailsService;
+import io.interfaz.billpayment.backend.service.UserDetailsServiceImpl;
 
 @RestController
 public class UserController {
 
 	@Autowired
-	private CustomUserDetailsService customUserService;
-
+	private UserDetailsServiceImpl  userDetailsService;
+/*
 
 	@RequestMapping("/users")
 	public List<User> getAllUsers() {
-		return customUserService.getAllUsers();
+		return userDetailsService.getAllUsers();
 	}
 
 	@RequestMapping("/user/{id}")
 	public User getUser(@PathVariable Long id) {
-		return customUserService.getUser(id);
+		return userDetailsService.getUser(id);
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/user")
 	public void addUser(@RequestBody User user) {
-		customUserService.createUserIfNotFound(user);
+		userDetailsService.loadUserByUsername(user.getUserName());
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, value = "/user/{id}")
 	public void updateUser(@RequestBody User user, @PathVariable Long id) {
 		user.setId(id);
-		customUserService.updateUser(user);
+		userDetailsService.updateUser(user);
 	}
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "/user/{id}")
 	public void deleteUser(@PathVariable Long id) {
-		customUserService.deleteUser(id);
+		userDetailsService.deleteUser(id);
 	}
-
+*/
 }
 

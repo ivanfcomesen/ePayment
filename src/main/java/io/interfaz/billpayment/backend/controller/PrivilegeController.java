@@ -18,7 +18,7 @@ public class PrivilegeController {
 	@Autowired
 	private PrivilegeService privilegeService;
 	
-	
+	/*
 	@RequestMapping("/privileges")
 	public List<Privilege> getAllPrivileges() {
 		return privilegeService.getAllPrivileges();		
@@ -43,5 +43,5 @@ public class PrivilegeController {
 	@RequestMapping(method = RequestMethod.DELETE, value = "/privilege/{id}")
 	public void deleteUser(@PathVariable Long id) {
 		privilegeService.deletePrivilege(id);
-	}
+	}*/
 }
