@@ -1,31 +1,33 @@
 package io.interfaz.billpayment.backend.model;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-public class CustomSecurityUser extends User implements UserDetails   {
-	
-	
+public class CustomSecurityUser extends User implements UserDetails {
+
 	private static final long serialVersionUID = 1L;
+	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-	public CustomSecurityUser () {}
-	  
-	  public CustomSecurityUser(User user) {
-	    this.setAuthorities(user.getAuthorities());
-	    this.setId(user.getId());
-	    this.setPass(user.getPass());
-	    this.setUserName(user.getUserName());
-	  }
+	public CustomSecurityUser() {
+	}
 
-	@Override
+	public CustomSecurityUser(User user) {
+		this.setAuthorities(user.getAuthorities());
+		this.setId(user.getId());
+		this.setPass(user.getPass());
+		this.setUserName(user.getUserName());
+	}
+
+	@Override // te encontre puto
 	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
+		return getPass();
 	}
 
 	@Override
-	public String getUsername() {
+	public String getUsername() {//debo revisar este nombre ojooooooo puto!!
 		// TODO Auto-generated method stub
-		return null;
+		return "isequeira";//
 	}
 
 	@Override
@@ -49,6 +51,6 @@ public class CustomSecurityUser extends User implements UserDetails   {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return  true;
+		return true;
 	}
 }

@@ -81,7 +81,7 @@ public class Authorities implements GrantedAuthority {
 
 	  @Override
 	  public String getAuthority() {
-	    return name;
+	    return getName();
 	  }
 
 	  public void setAuthority(String authority) {
