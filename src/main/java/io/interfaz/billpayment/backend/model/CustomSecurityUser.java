@@ -25,7 +25,7 @@ public class CustomSecurityUser extends User implements UserDetails {
 	}
 
 	@Override
-	public String getUsername() {//debo revisar este nombre ojooooooo puto!!
+	public String getUsername() {//debo revisar este nombre ojoooo!!
 		// TODO Auto-generated method stub
 		return "isequeira";//
 	}
